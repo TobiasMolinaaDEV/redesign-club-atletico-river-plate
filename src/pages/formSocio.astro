@@ -1,0 +1,33 @@
+---
+
+import Nav from '../sections/nav.astro'
+import Footer from '../sections/footer.astro'
+import Layout from '../layouts/Layout.astro'
+---
+<Layout title='Socios'>
+    <header></header>
+    <Nav />
+    <body>
+        <section>
+            <h1>Registro</h1>
+            <form>
+                <label>
+                    Username:
+                    <input type="text" name="username" />
+                </label>
+                 
+                <label>
+                    Email:
+                    <input type="email" name="email" />
+                </label>
+                
+                <label>
+                    Password:
+                    <input type="password" name="password" />
+                </label>
+                <button>Submit</button>
+            </form>
+        </section>
+    </body>
+    <Footer />
+</Layout>

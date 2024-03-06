@@ -1,0 +1,155 @@
+---
+import 'bootstrap/dist/css/bootstrap.css'
+import { Breadcrumb } from 'astro-bootstrap';
+import Header from './header.astro'
+
+import { Navbar } from 'astro-bootstrap';
+import type { NavbarItemType } from 'astro-bootstrap';
+
+const siteLogo = ''; 
+const items: NavbarItemType[] = [
+  { text: 'Futbol', href: '#' },
+  { text: 'Socios', href: '#' },
+  { text: 'Istitución', href: '#' },
+  { text: 'Historia', href: '#' },
+  
+  {
+    text: 'Titulos',
+    subItems: [
+      { text: 'First child', href: '#' },
+      { divider: true },
+      { text: 'Second child', href: '#' },
+    ],
+  },
+];
+
+const id = 'navbarDemo';
+---
+
+<Header/>
+
+<Navbar  class="navbar-expand-lg bg-dark font-weight-bold" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="brand hidden-xs" style="left: -50px"  href="#">{siteLogo} <img src="/logo-river.png" alt="River Plate"></a>
+    <Navbar.Toggler controls={id} />
+    <Navbar.Collapse {id}>
+      <Navbar.Items {items} class="me-auto mb-6 mb-lg-0" />
+    </Navbar.Collapse>
+  </div>
+</Navbar>
+
+
+	
+
+
+<!--
+<nav>
+	<div class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom:0px;" !important>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"> <img src="/logo-river.png" alt="River Plate"></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">Futbol</a></li>
+					<li><a href="#">Socios</a></li>
+					<li><a href="#">Hisotoria</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<nav>
+	<div class="navbar navbar-inverse" style="margin-bottom:0px; !important">
+		<div class="container">
+			<div class="row">
+				<div class="navbar-header">
+
+				</div>
+				<div class="collapse navbar-collapse">
+					<a class="brand hidden-xs" style="left: -50px;" title="River Plate">
+						<img src="/logo-river.png" alt="River Plate">
+					</a>
+					<ul class="nav navbar-nav">
+						<li class="dropdown">Futbol</li>
+						<li class="dropdown">Socios</li>
+						<li class="dropdown">Historia</li>
+						<li class="dropdown">River ID</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<h1>Bienvenidos <span class="text-gradient">River Plate</span></h1>
+
+-->
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+        background-color: black;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.row{
+		display: table;
+	}
+</style>
+
+
+
+
+
