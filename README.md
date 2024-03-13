@@ -1,4 +1,7 @@
-# Redesing homepage Club Atletico River Plate
+# Redesign homepage Club Atletico River Plate
+
+Este Proyecto nace con la expectativa de traer una nueva propuesta de homepage para el club del que soy hincha asi tambien sumando conocimientos en Astro, JavaScript, React, Astro-Bootstrap, css
+
 
 ```sh
 npm create astro@latest -- --template basics
