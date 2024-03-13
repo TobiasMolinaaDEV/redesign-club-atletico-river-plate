@@ -11,7 +11,8 @@ import Promotion from '../sections/promotion.astro'
 import Nav from '../sections/nav.astro'
 import SponsorMain from '../sections/sponsorMain.astro'
 import SponsorSecundary from '../sections/sponsorSecundary.astro'
-
+import SponsorSilver from '../sections/sponsorSilver.astro'
+import SponsorBronze from '../sections/sponsorBronze.astro'
 
 ---
 
@@ -19,18 +20,21 @@ import SponsorSecundary from '../sections/sponsorSecundary.astro'
 <Layout title="Bienvenido Millonario!">
 	<Nav />
 		<div style="margin-bottom: 55px;"><img class="img-responsive wide" src="/public/cariverplate.png" width="100%"></div>
-		<Promotion />
+	<Promotion />
 	<main>
 		<Info />
 	</main>
 	<Trophies />
 	<SponsorMain />
 	<SponsorSecundary />
+	<SponsorSilver />
+	<SponsorBronze />
 	<Footer />
-	
+
 </Layout>
 
 <style>
+	
 	main {
 		margin: auto;
 		padding: 1rem;

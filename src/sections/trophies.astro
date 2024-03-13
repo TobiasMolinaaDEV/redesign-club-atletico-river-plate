@@ -1,26 +1,90 @@
-<main>
-    <div id="sectionTrophies">
-        <h1>Trofeos</h1>
+<div class="divMain">
+    <div id="sectionTrophies">       
         <ul>
             <li>
                 <div>
                     <div></div>
-                    <img src="" alt="">
+                    <img src="ligaArgentina.png" alt="Liga Argentina">
+                    <noscript></noscript>
                 </div>
-                <div>
-
-                </div>
+                <div>38</div>
             </li>
-            <li></li>
-            <li></li>
+            
+            <li>
+                <div>
+                    <div></div>
+                    <img src="Libertadores4.png" alt="Libertadores">
+                    <noscript></noscript>
+                </div>
+                <div>4</div>
+            </li>
+            <li>
+                <div>
+                    <div></div>
+                    <img src="sudamericana.png" alt="Sudamericana">
+                    <noscript></noscript>
+                </div>
+                <div>1</div>
+            </li>
+            
+            <li>
+                <div>
+                    <div></div>
+                    <img src="copaArgentina.png" alt="Copa Argentina">
+                    <noscript></noscript>
+                </div>
+                <div>3</div>
+            </li>
+            
+            <li>
+                <div>
+                    <div></div>
+                    <img src="recopa.png" alt="Recopa">
+                    <noscript></noscript>
+                </div>
+                <div>3</div>
+            </li>
+            <li>
+                <div>
+                    <div></div>
+                    <img src="intercontinental.png" alt="Intercontinental">
+                    <noscript></noscript>
+                </div>
+                <div>1</div>
+            </li>
+            
         </ul>
     </div>
 
-</main>
+</div>
 
 <style>
-    main{
-        background-color: #ff0000;
+    ul {
+        margin-bottom: 0px;
+    }
+    .divMain{
+        background-color: #f6f6f6; 
+    }
+    #sectionTrophies {
+        margin-top: 20px;
+    }
+    #sectionTrophies ul {
+        display: flex; /* Establece el contenedor <ul> como un contenedor flex */
+        list-style-type: none; /* Elimina los puntos de la lista */
+        padding: 0; /* Elimina el relleno predeterminado */
+    }
+
+    #sectionTrophies li {
+        flex: 1; /* Hace que cada elemento <li> ocupe un espacio igual dentro del contenedor flex */
+    }
+
+    #sectionTrophies li > div {
+        display: flex; /* Establece los contenedores internos como flex para alinear la imagen y el texto */
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+        flex-direction: column; /* Alinea los elementos verticalmente */
+        text-align: center; /* Alinea el texto al centro */
+        margin: 0 10px; /* Añade un espacio entre los elementos <li> */
     }
 
 </style>

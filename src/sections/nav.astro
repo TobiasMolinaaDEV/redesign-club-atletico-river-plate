@@ -10,15 +10,15 @@ const siteLogo = '';
 const items: NavbarItemType[] = [
   { text: 'Futbol', href: '#' },
   { text: 'Socios', href: '#' },
-  { text: 'Istitución', href: '#' },
+  { text: 'Institución', href: '#' },
   { text: 'Historia', href: '#' },
   
   {
     text: 'Titulos',
     subItems: [
-      { text: 'First child', href: '#' },
+      { text: 'Nacionales', href: '#' },
       { divider: true },
-      { text: 'Second child', href: '#' },
+      { text: 'Internacionales', href: '#' },
     ],
   },
 ];
@@ -28,19 +28,16 @@ const id = 'navbarDemo';
 
 <Header/>
 
-<Navbar  class="navbar-expand-lg bg-dark font-weight-bold" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="brand hidden-xs" style="left: -50px"  href="#">{siteLogo} <img src="/logo-river.png" alt="River Plate"></a>
-    <Navbar.Toggler controls={id} />
-    <Navbar.Collapse {id}>
-      <Navbar.Items {items} class="me-auto mb-6 mb-lg-0" />
-    </Navbar.Collapse>
-  </div>
-</Navbar>
-
-
-	
-
+<Navbar class="navbar-expand-lg bg-dark font-weight-bold" data-bs-theme="dark">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="#">{siteLogo} <img src="/logo-river.png" alt="River Plate"></a>
+	  <Navbar.Toggler controls={id} />
+	  <Navbar.Collapse id={id}>
+		<Navbar.Items items={items} class="me-auto mb-6 mb-lg-0" />
+	  </Navbar.Collapse>
+	</div>
+  </Navbar>
+  
 
 <!--
 <nav>
@@ -90,7 +87,6 @@ const id = 'navbarDemo';
 	main {
 		margin: auto;
 		padding: 1rem;
-		
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
