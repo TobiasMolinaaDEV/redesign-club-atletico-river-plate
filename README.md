@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Redesing homepage Club Atletico River Plate
 
 ```sh
 npm create astro@latest -- --template basics
